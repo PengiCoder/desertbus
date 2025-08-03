@@ -9,421 +9,438 @@
 <body>
     <div class="container">
         <h1>Bus Game Title Checklist</h1>
-        <div id="checklist">
-            <div class="title-item" data-title="Acid">
-                <input type="checkbox" id="acid">
-                <label for="acid">Acid</label>
-                <div class="description">
-                    <p>Withstand the Acid Rain for 30 seconds by using Tee-Vees (these are stackable and equipping 2 at the same time should provide enough of a health bonus to survive) for extra health or by using Bloxy Colas to heal.</p>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar-label">Progress: <span id="progress-percentage">0%</span></div>
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
+
+        <div class="checklist-grid">
+            <div class="column">
+                <h2>Uncompleted Titles</h2>
+                <div id="uncompleted-checklist" class="checklist">
+                    <div class="title-item" data-title="Acid">
+                        <input type="checkbox" id="acid">
+                        <label for="acid">Acid</label>
+                        <div class="description">
+                            <p>Withstand the Acid Rain for 30 seconds by using Tee-Vees (these are stackable and equipping 2 at the same time should provide enough of a health bonus to survive) for extra health or by using Bloxy Colas to heal.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Annotator">
+                        <input type="checkbox" id="annotator">
+                        <label for="annotator">Annotator</label>
+                        <div class="description">
+                            <p>Place a total of twenty notes.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Big spender">
+                        <input type="checkbox" id="big-spender">
+                        <label for="big-spender">Big spender</label>
+                        <div class="description">
+                            <p>Spend 8000 medals, good luck.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Bon Voyage">
+                        <input type="checkbox" id="bon-voyage">
+                        <label for="bon-voyage">Bon Voyage</label>
+                        <div class="description">
+                            <p>Kill the Aviator Guy, who usually appears 17 minutes after a server has been made. Hit him with a wrench until his jetpack malfunctions to do so.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Button Master">
+                        <input type="checkbox" id="button-master">
+                        <label for="button-master">Button Master</label>
+                        <div class="description">
+                            <p>Press the button 5,000 times.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Chatty">
+                        <input type="checkbox" id="chatty">
+                        <label for="chatty">Chatty</label>
+                        <div class="description">
+                            <p>Send 5 messages over the phone.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Cheesy">
+                        <input type="checkbox" id="cheesy">
+                        <label for="cheesy">Cheesy</label>
+                        <div class="description">
+                            <p>Get the Cheese item from Yummington.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Chef">
+                        <input type="checkbox" id="chef">
+                        <label for="chef">Chef</label>
+                        <div class="description">
+                            <p>Get a very high score from the Burger Critic, 300 or more to be precise. Add 1 Bottom Bun and 19 Sodas to do this easily.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Closeted">
+                        <input type="checkbox" id="closeted">
+                        <label for="closeted">Closeted</label>
+                        <div class="description">
+                            <p>Go in the Closet for the first time.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Companion">
+                        <input type="checkbox" id="companion">
+                        <label for="companion">Companion</label>
+                        <div class="description">
+                            <p>Stay in the same server with a friend for one hour.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Cooked">
+                        <input type="checkbox" id="cooked">
+                        <label for="cooked">Cooked</label>
+                        <div class="description">
+                            <p>Go into the fire hatch once the Burger Critic rates the burger. This will send you flying into the air.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Criss Cross">
+                        <input type="checkbox" id="criss-cross">
+                        <label for="criss-cross">Criss Cross</label>
+                        <div class="description">
+                            <p>Win 15 Games of Tic-Tac-Toe.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Cactus Whisperer">
+                        <input type="checkbox" id="cactus-whisperer">
+                        <label for="cactus-whisperer">Cactus Whisperer</label>
+                        <div class="description">
+                            <p>Die to a cactus, which show up in the desert every now and then. Or, you can go into a private server and walk over to them on your own. (Yeoch! Pricky.)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Decorator">
+                        <input type="checkbox" id="decorator">
+                        <label for="decorator">Decorator</label>
+                        <div class="description">
+                            <p>Unlock every permanent decoration on the bus. If you've already done this and you don't have the title, you can buy an item and you'll get it.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Doppelganger">
+                        <input type="checkbox" id="doppelganger">
+                        <label for="doppelganger">Doppelganger</label>
+                        <div class="description">
+                            <p>This title can be acquired by going to the laboratory during the Experimen Lab event and following these instructions. Use the body swap machine by standing on one of the platforms and having someone else stand on the other. Then, a third player must press the red button. After this, the players standing on the platforms will get the title. (You will swap bodies, but resetting gives you your avatar back. Your users are not swapped.)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Driver">
+                        <input type="checkbox" id="driver">
+                        <label for="driver">Driver</label>
+                        <div class="description">
+                            <p>Stay in the driver's seat for one hour straight. (You can’t jump during this.)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Duckie">
+                        <input type="checkbox" id="duckie">
+                        <label for="duckie">Duckie</label>
+                        <div class="description">
+                            <p>Assist the button in reaching 50,000 clicks. Any multiple of 50,000 also counts. So basically, just click the button when it's close to a 50,000 multiple.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Enduring">
+                        <input type="checkbox" id="enduring">
+                        <label for="enduring">Enduring</label>
+                        <div class="description">
+                            <p>Stay in the same server for one hour.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Energetic">
+                        <input type="checkbox" id="energetic">
+                        <label for="energetic">Energetic</label>
+                        <div class="description">
+                            <p>Emote for half an hour straight. Make sure to click the Roblox window every few minutes to not get kicked for inactivity.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Exhausted">
+                        <input type="checkbox" id="exhausted">
+                        <label for="exhausted">Exhausted</label>
+                        <div class="description">
+                            <p>Press the switch at the 97th floor during the Long Stairs event.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Experienced">
+                        <input type="checkbox" id="experienced">
+                        <label for="experienced">Experienced</label>
+                        <div class="description">
+                            <p>Witness at least fifty events of any type. Weather events count towards this.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Explosive">
+                        <input type="checkbox" id="explosive">
+                        <label for="explosive">Explosive</label>
+                        <div class="description">
+                            <p>Get blown up by the C4. Only appears once per server, even if there is a restock. It is the very last item in the c4 row of the vending machine.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Fashionista">
+                        <input type="checkbox" id="fashionista">
+                        <label for="fashionista">Fashionista</label>
+                        <div class="description">
+                            <p>Buy a wobbly accessory from the Accessory Shop. (Event on the bus.)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Freebird">
+                        <input type="checkbox" id="freebird">
+                        <label for="freebird">Freebird</label>
+                        <div class="description">
+                            <p>Get flung away by the trapdoor on the trailer.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Frosty">
+                        <input type="checkbox" id="frosty">
+                        <label for="frosty">Frosty</label>
+                        <div class="description">
+                            <p>Turn the Air Conditioner to 2° or lower and stand under it to freeze.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Glass Breaker">
+                        <input type="checkbox" id="glass-breaker">
+                        <label for="glass-breaker">Glass Breaker</label>
+                        <div class="description">
+                            <p>Walk or jump on any of the Sunroof's tiles until they break. You will then fall through the broken window and be given the title.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Global">
+                        <input type="checkbox" id="global">
+                        <label for="global">Global</label>
+                        <div class="description">
+                            <p>Spin the Globe 2000 times. - Possibly a reference to Sol's RNG as the Global Announcement text is the same color.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Goner">
+                        <input type="checkbox" id="goner">
+                        <label for="goner">Goner</label>
+                        <div class="description">
+                            <p>Walk into the black tunnel (located behind the bus in a fresh new server.) (Recommend to use a private server for this.)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Heartless">
+                        <input type="checkbox" id="heartless">
+                        <label for="heartless">Heartless</label>
+                        <div class="description">
+                            <p>Obtain a Teddy Bear from the Claw Machine and throw the Teddy Bear away in any of the trash bins.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Hoarder">
+                        <input type="checkbox" id="hoarder">
+                        <label for="hoarder">Hoarder</label>
+                        <div class="description">
+                            <p>Have thirty or more items in your inventory. It is recommended to use the Cheese and Monster Mash Potions for this.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Imprudent">
+                        <input type="checkbox" id="imprudent">
+                        <label for="imprudent">Imprudent</label>
+                        <div class="description">
+                            <p>Get 3 or more players to jump on the balcony with the sign that says "WEIGHT LIMIT: APPROX. 3 PEOPLE" until it breaks off the bus.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Interstellar">
+                        <input type="checkbox" id="interstellar">
+                        <label for="interstellar">Interstellar</label>
+                        <div class="description">
+                            <p>You have a 1/500 chance of getting flung on the trapdoor to get the title, i suggest using btools in a private server to get this easier (make a box)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Isolated">
+                        <input type="checkbox" id="isolated">
+                        <label for="isolated">Isolated</label>
+                        <div class="description">
+                            <p>Spend an hour in the Closet without jumping. It may take up to one minute after an hour to get the title.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Long Suffering">
+                        <input type="checkbox" id="long-suffering">
+                        <label for="long-suffering">Long Suffering</label>
+                        <div class="description">
+                            <p>Stay in the same server for ten hours, good luck.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Model">
+                        <input type="checkbox" id="model">
+                        <label for="model">Model</label>
+                        <div class="description">
+                            <p>Equip 3 accessories at once. You can get them from the Accessory Shop or by using Tee-Vees. The limit is three without the "double accessories" gamepasses.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Night Rider">
+                        <input type="checkbox" id="night-rider">
+                        <label for="night-rider">Night Rider</label>
+                        <div class="description">
+                            <p>Ride the bus during night time in-game.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Petitionist">
+                        <input type="checkbox" id="petitionist">
+                        <label for="petitionist">Petitionist</label>
+                        <div class="description">
+                            <p>Fill all twenty-four slots with the Petition item without dying or leaving. Easily one of the hardest titles, as it requires two full servers in one, so keep playing! (There are 24 slots in total.)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Photographer">
+                        <input type="checkbox" id="photographer">
+                        <label for="photographer">Photographer</label>
+                        <div class="description">
+                            <p>Take a photo with five people in it at once, using the Camera item.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Photogenic">
+                        <input type="checkbox" id="photogenic">
+                        <label for="photogenic">Photogenic</label>
+                        <div class="description">
+                            <p>Take a picture of Bob, who is located on the top left corner of the Accessory Shop next to George.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Resilient">
+                        <input type="checkbox" id="resilient">
+                        <label for="resilient">Resilient</label>
+                        <div class="description">
+                            <p>Stay in the same server for five hours at in one session.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Revolting">
+                        <input type="checkbox" id="revolting">
+                        <label for="revolting">Revolting</label>
+                        <div class="description">
+                            <p>During the Blender event, add all the ingredients (including grenade) and a player as well by jumping in the blender, process, and drink. Your avatar will be turned into the classic skeleton.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Regret">
+                        <input type="checkbox" id="regret">
+                        <label for="regret">Regret</label>
+                        <div class="description">
+                            <p>Sit in the Foldable Chair for five minutes. You will then be transported to a dark room and be given the title. (based off of the Shinji Chair meme from Neon Genesis: Evangelion)</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Short Circuit">
+                        <input type="checkbox" id="short-circuit">
+                        <label for="short-circuit">Short Circuit</label>
+                        <div class="description">
+                            <p>Hit the power box (1st floor on the bus) with a wrench until the lights go out.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Shoplifter">
+                        <input type="checkbox" id="shoplifter">
+                        <label for="shoplifter">Shoplifter</label>
+                        <div class="description">
+                            <p>Click on any of the Shopkeeper's hats. After doing so, you'll get the title and a special accessory.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Smasher">
+                        <input type="checkbox" id="smasher">
+                        <label for="smasher">Smasher</label>
+                        <div class="description">
+                            <p>Walk or jump on the glass tile right above the table. There is a small chance for it to play a meme sound “oh no! Our table! It’s broken D:” and if it does, you'll get the title.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Spender">
+                        <input type="checkbox" id="spender">
+                        <label for="spender">Spender</label>
+                        <div class="description">
+                            <p>Spend 1500 medals its that simple.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Thirsty">
+                        <input type="checkbox" id="thirsty">
+                        <label for="thirsty">Thirsty</label>
+                        <div class="description">
+                            <p>Drink 30 Bloxy Colas. Recommended to play alone on a private server to accomplish this.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Thunderstruck">
+                        <input type="checkbox" id="thunderstruck">
+                        <label for="thunderstruck">Thunderstruck</label>
+                        <div class="description">
+                            <p>Get struck by lightning. It is recommended to stay in spots where lightning is guaranteed to hit.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Turbulent">
+                        <input type="checkbox" id="turbulent">
+                        <label for="turbulent">Turbulent</label>
+                        <div class="description">
+                            <p>Get sucked into a tornado.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Unlucky">
+                        <input type="checkbox" id="unlucky">
+                        <label for="unlucky">Unlucky</label>
+                        <div class="description">
+                            <p>Land "DEATH" on the Spinning Wheel.</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Lucky">
+                        <input type="checkbox" id="lucky">
+                        <label for="lucky">Lucky</label>
+                        <div class="description">
+                            <p>Land "Jackpot" on the Spinning wheel. It doesn't give any MP$, unfortunately. :(</p>
+                        </div>
+                    </div>
+
+                    <div class="title-item" data-title="Voyager">
+                        <input type="checkbox" id="voyager">
+                        <label for="voyager">Voyager</label>
+                        <div class="description">
+                            <p>Travel 200 Miles total.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="title-item" data-title="Annotator">
-                <input type="checkbox" id="annotator">
-                <label for="annotator">Annotator</label>
-                <div class="description">
-                    <p>Place a total of twenty notes.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Big spender">
-                <input type="checkbox" id="big-spender">
-                <label for="big-spender">Big spender</label>
-                <div class="description">
-                    <p>Spend 8000 medals, good luck.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Bon Voyage">
-                <input type="checkbox" id="bon-voyage">
-                <label for="bon-voyage">Bon Voyage</label>
-                <div class="description">
-                    <p>Kill the Aviator Guy, who usually appears 17 minutes after a server has been made. Hit him with a wrench until his jetpack malfunctions to do so.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Button Master">
-                <input type="checkbox" id="button-master">
-                <label for="button-master">Button Master</label>
-                <div class="description">
-                    <p>Press the button 5,000 times.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Chatty">
-                <input type="checkbox" id="chatty">
-                <label for="chatty">Chatty</label>
-                <div class="description">
-                    <p>Send 5 messages over the phone.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Cheesy">
-                <input type="checkbox" id="cheesy">
-                <label for="cheesy">Cheesy</label>
-                <div class="description">
-                    <p>Get the Cheese item from Yummington.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Chef">
-                <input type="checkbox" id="chef">
-                <label for="chef">Chef</label>
-                <div class="description">
-                    <p>Get a very high score from the Burger Critic, 300 or more to be precise. Add 1 Bottom Bun and 19 Sodas to do this easily.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Closeted">
-                <input type="checkbox" id="closeted">
-                <label for="closeted">Closeted</label>
-                <div class="description">
-                    <p>Go in the Closet for the first time.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Companion">
-                <input type="checkbox" id="companion">
-                <label for="companion">Companion</label>
-                <div class="description">
-                    <p>Stay in the same server with a friend for one hour.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Cooked">
-                <input type="checkbox" id="cooked">
-                <label for="cooked">Cooked</label>
-                <div class="description">
-                    <p>Go into the fire hatch once the Burger Critic rates the burger. This will send you flying into the air.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Criss Cross">
-                <input type="checkbox" id="criss-cross">
-                <label for="criss-cross">Criss Cross</label>
-                <div class="description">
-                    <p>Win 15 Games of Tic-Tac-Toe.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Cactus Whisperer">
-                <input type="checkbox" id="cactus-whisperer">
-                <label for="cactus-whisperer">Cactus Whisperer</label>
-                <div class="description">
-                    <p>Die to a cactus, which show up in the desert every now and then. Or, you can go into a private server and walk over to them on your own. (Yeoch! Pricky.)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Decorator">
-                <input type="checkbox" id="decorator">
-                <label for="decorator">Decorator</label>
-                <div class="description">
-                    <p>Unlock every permanent decoration on the bus. If you've already done this and you don't have the title, you can buy an item and you'll get it.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Doppelganger">
-                <input type="checkbox" id="doppelganger">
-                <label for="doppelganger">Doppelganger</label>
-                <div class="description">
-                    <p>This title can be acquired by going to the laboratory during the Experimen Lab event and following these instructions. Use the body swap machine by standing on one of the platforms and having someone else stand on the other. Then, a third player must press the red button. After this, the players standing on the platforms will get the title. (You will swap bodies, but resetting gives you your avatar back. Your users are not swapped.)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Driver">
-                <input type="checkbox" id="driver">
-                <label for="driver">Driver</label>
-                <div class="description">
-                    <p>Stay in the driver's seat for one hour straight. (You can’t jump during this.)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Duckie">
-                <input type="checkbox" id="duckie">
-                <label for="duckie">Duckie</label>
-                <div class="description">
-                    <p>Assist the button in reaching 50,000 clicks. Any multiple of 50,000 also counts. So basically, just click the button when it's close to a 50,000 multiple.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Enduring">
-                <input type="checkbox" id="enduring">
-                <label for="enduring">Enduring</label>
-                <div class="description">
-                    <p>Stay in the same server for one hour.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Energetic">
-                <input type="checkbox" id="energetic">
-                <label for="energetic">Energetic</label>
-                <div class="description">
-                    <p>Emote for half an hour straight. Make sure to click the Roblox window every few minutes to not get kicked for inactivity.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Exhausted">
-                <input type="checkbox" id="exhausted">
-                <label for="exhausted">Exhausted</label>
-                <div class="description">
-                    <p>Press the switch at the 97th floor during the Long Stairs event.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Experienced">
-                <input type="checkbox" id="experienced">
-                <label for="experienced">Experienced</label>
-                <div class="description">
-                    <p>Witness at least fifty events of any type. Weather events count towards this.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Explosive">
-                <input type="checkbox" id="explosive">
-                <label for="explosive">Explosive</label>
-                <div class="description">
-                    <p>Get blown up by the C4. Only appears once per server, even if there is a restock. It is the very last item in the c4 row of the vending machine.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Fashionista">
-                <input type="checkbox" id="fashionista">
-                <label for="fashionista">Fashionista</label>
-                <div class="description">
-                    <p>Buy a wobbly accessory from the Accessory Shop. (Event on the bus.)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Freebird">
-                <input type="checkbox" id="freebird">
-                <label for="freebird">Freebird</label>
-                <div class="description">
-                    <p>Get flung away by the trapdoor on the trailer.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Frosty">
-                <input type="checkbox" id="frosty">
-                <label for="frosty">Frosty</label>
-                <div class="description">
-                    <p>Turn the Air Conditioner to 2° or lower and stand under it to freeze.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Glass Breaker">
-                <input type="checkbox" id="glass-breaker">
-                <label for="glass-breaker">Glass Breaker</label>
-                <div class="description">
-                    <p>Walk or jump on any of the Sunroof's tiles until they break. You will then fall through the broken window and be given the title.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Global">
-                <input type="checkbox" id="global">
-                <label for="global">Global</label>
-                <div class="description">
-                    <p>Spin the Globe 2000 times. - Possibly a reference to Sol's RNG as the Global Announcement text is the same color.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Goner">
-                <input type="checkbox" id="goner">
-                <label for="goner">Goner</label>
-                <div class="description">
-                    <p>Walk into the black tunnel (located behind the bus in a fresh new server.) (Recommend to use a private server for this.)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Heartless">
-                <input type="checkbox" id="heartless">
-                <label for="heartless">Heartless</label>
-                <div class="description">
-                    <p>Obtain a Teddy Bear from the Claw Machine and throw the Teddy Bear away in any of the trash bins.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Hoarder">
-                <input type="checkbox" id="hoarder">
-                <label for="hoarder">Hoarder</label>
-                <div class="description">
-                    <p>Have thirty or more items in your inventory. It is recommended to use the Cheese and Monster Mash Potions for this.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Imprudent">
-                <input type="checkbox" id="imprudent">
-                <label for="imprudent">Imprudent</label>
-                <div class="description">
-                    <p>Get 3 or more players to jump on the balcony with the sign that says "WEIGHT LIMIT: APPROX. 3 PEOPLE" until it breaks off the bus.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Interstellar">
-                <input type="checkbox" id="interstellar">
-                <label for="interstellar">Interstellar</label>
-                <div class="description">
-                    <p>You have a 1/500 chance of getting flung on the trapdoor to get the title, i suggest using btools in a private server to get this easier (make a box)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Isolated">
-                <input type="checkbox" id="isolated">
-                <label for="isolated">Isolated</label>
-                <div class="description">
-                    <p>Spend an hour in the Closet without jumping. It may take up to one minute after an hour to get the title.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Long Suffering">
-                <input type="checkbox" id="long-suffering">
-                <label for="long-suffering">Long Suffering</label>
-                <div class="description">
-                    <p>Stay in the same server for ten hours, good luck.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Model">
-                <input type="checkbox" id="model">
-                <label for="model">Model</label>
-                <div class="description">
-                    <p>Equip 3 accessories at once. You can get them from the Accessory Shop or by using Tee-Vees. The limit is three without the "double accessories" gamepasses.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Night Rider">
-                <input type="checkbox" id="night-rider">
-                <label for="night-rider">Night Rider</label>
-                <div class="description">
-                    <p>Ride the bus during night time in-game.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Petitionist">
-                <input type="checkbox" id="petitionist">
-                <label for="petitionist">Petitionist</label>
-                <div class="description">
-                    <p>Fill all twenty-four slots with the Petition item without dying or leaving. Easily one of the hardest titles, as it requires two full servers in one, so keep playing! (There are 24 slots in total.)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Photographer">
-                <input type="checkbox" id="photographer">
-                <label for="photographer">Photographer</label>
-                <div class="description">
-                    <p>Take a photo with five people in it at once, using the Camera item.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Photogenic">
-                <input type="checkbox" id="photogenic">
-                <label for="photogenic">Photogenic</label>
-                <div class="description">
-                    <p>Take a picture of Bob, who is located on the top left corner of the Accessory Shop next to George.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Resilient">
-                <input type="checkbox" id="resilient">
-                <label for="resilient">Resilient</label>
-                <div class="description">
-                    <p>Stay in the same server for five hours at in one session.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Revolting">
-                <input type="checkbox" id="revolting">
-                <label for="revolting">Revolting</label>
-                <div class="description">
-                    <p>During the Blender event, add all the ingredients (including grenade) and a player as well by jumping in the blender, process, and drink. Your avatar will be turned into the classic skeleton.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Regret">
-                <input type="checkbox" id="regret">
-                <label for="regret">Regret</label>
-                <div class="description">
-                    <p>Sit in the Foldable Chair for five minutes. You will then be transported to a dark room and be given the title. (based off of the Shinji Chair meme from Neon Genesis: Evangelion)</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Short Circuit">
-                <input type="checkbox" id="short-circuit">
-                <label for="short-circuit">Short Circuit</label>
-                <div class="description">
-                    <p>Hit the power box (1st floor on the bus) with a wrench until the lights go out.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Shoplifter">
-                <input type="checkbox" id="shoplifter">
-                <label for="shoplifter">Shoplifter</label>
-                <div class="description">
-                    <p>Click on any of the Shopkeeper's hats. After doing so, you'll get the title and a special accessory.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Smasher">
-                <input type="checkbox" id="smasher">
-                <label for="smasher">Smasher</label>
-                <div class="description">
-                    <p>Walk or jump on the glass tile right above the table. There is a small chance for it to play a meme sound “oh no! Our table! It’s broken D:” and if it does, you'll get the title.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Spender">
-                <input type="checkbox" id="spender">
-                <label for="spender">Spender</label>
-                <div class="description">
-                    <p>Spend 1500 medals its that simple.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Thirsty">
-                <input type="checkbox" id="thirsty">
-                <label for="thirsty">Thirsty</label>
-                <div class="description">
-                    <p>Drink 30 Bloxy Colas. Recommended to play alone on a private server to accomplish this.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Thunderstruck">
-                <input type="checkbox" id="thunderstruck">
-                <label for="thunderstruck">Thunderstruck</label>
-                <div class="description">
-                    <p>Get struck by lightning. It is recommended to stay in spots where lightning is guaranteed to hit.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Turbulent">
-                <input type="checkbox" id="turbulent">
-                <label for="turbulent">Turbulent</label>
-                <div class="description">
-                    <p>Get sucked into a tornado.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Unlucky">
-                <input type="checkbox" id="unlucky">
-                <label for="unlucky">Unlucky</label>
-                <div class="description">
-                    <p>Land "DEATH" on the Spinning Wheel.</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Lucky">
-                <input type="checkbox" id="lucky">
-                <label for="lucky">Lucky</label>
-                <div class="description">
-                    <p>Land "Jackpot" on the Spinning wheel. It doesn't give any MP$, unfortunately. :(</p>
-                </div>
-            </div>
-
-            <div class="title-item" data-title="Voyager">
-                <input type="checkbox" id="voyager">
-                <label for="voyager">Voyager</label>
-                <div class="description">
-                    <p>Travel 200 Miles total.</p>
-                </div>
+            <div class="column">
+                <h2>Completed Titles</h2>
+                <div id="completed-checklist" class="checklist">
+                    </div>
             </div>
         </div>
     </div>
