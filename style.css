@@ -16,13 +16,73 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px; /* Increased max-width for two columns */
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     text-align: center;
     color: #0056b3;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* Progress Bar Styling */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.progress-bar-label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.progress-bar-fill {
+    height: 25px;
+    background-color: #4CAF50; /* Green */
+    width: 0%; /* Controlled by JS */
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Checklist Grid for two columns */
+.checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    flex-grow: 1; /* Allow grid to grow and take available space */
+}
+
+.column {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.checklist {
+    /* No specific styling needed here, items will flow inside */
 }
 
 .title-item {
@@ -32,6 +92,7 @@ h1 {
     margin-bottom: 10px;
     padding: 15px;
     display: flex;
+    flex-direction: column; /* Stack checkbox/label and description */
     align-items: flex-start;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
@@ -46,11 +107,18 @@ h1 {
     border-color: #28a745;
 }
 
+.title-item .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure wrapper takes full width */
+    margin-bottom: 5px; /* Space between checkbox/label and description */
+}
+
 .title-item input[type="checkbox"] {
     margin-right: 15px;
     transform: scale(1.5); /* Make checkbox larger */
     flex-shrink: 0; /* Prevent checkbox from shrinking */
-    margin-top: 2px; /* Adjust vertical alignment */
+    margin-top: 0; /* Align perfectly */
 }
 
 .title-item label {
@@ -66,16 +134,12 @@ h1 {
 }
 
 .title-item .description {
-    margin-top: 10px;
-    padding-left: 30px; /* Align with the label text */
     font-size: 0.9em;
     color: #666;
-    display: none; /* Hidden by default */
-    width: 100%; /* Take full width */
-}
-
-.title-item.expanded .description {
-    display: block; /* Show when expanded */
+    display: block; /* Always visible now, no longer toggled */
+    width: 100%;
+    padding-left: 30px; /* Indent description */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .title-item p {
@@ -84,21 +148,48 @@ h1 {
 }
 
 /* Responsive adjustments */
+@media (max-width: 900px) {
+    .checklist-grid {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 15px;
     }
 
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
     .title-item {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .title-item .checkbox-wrapper {
+        margin-bottom: 2px;
     }
 
     .title-item input[type="checkbox"] {
-        margin-bottom: 10px;
+        margin-right: 10px;
+        transform: scale(1.3);
+    }
+
+    .title-item label {
+        font-size: 1em;
     }
 
     .title-item .description {
-        padding-left: 0;
+        padding-left: 25px;
+        font-size: 0.85em;
+    }
+
+    .progress-bar-label {
+        font-size: 1em;
     }
 }
